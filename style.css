@@ -1,0 +1,21 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2;
+    color: #2F2F2F;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-pdf {
+    min-width: 20vw;
+    width: auto;
+    background-color: #2F2F2F;
+    color: #F2F2F2;
+    font-size: 20px;
+    border: solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
