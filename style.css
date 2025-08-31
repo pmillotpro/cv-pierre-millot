@@ -11,6 +11,8 @@
     --texte-lien-survol: #f05d5e;
     --ombre-legere: 0 4px 12px rgba(0, 0, 0, 0.08);
     --ombre-survol: 0 6px 20px rgba(0, 0, 0, 0.15);
+    --halo-focus-primaire: 0 0 0 3px rgba(15, 113, 115, 0.2);
+    --halo-focus-principal: 0 0 0 3px rgba(240, 93, 94, 0.2);
 }
 
 /* === Balises générales === */
@@ -89,6 +91,12 @@ hr {
     transition: all 0.3s ease;
 }
 
+.carteCentrer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .carte h3 {
     margin-top: 0;
     color: var(--texte-primaire);
@@ -129,6 +137,32 @@ hr {
     border: none transparent;
     border-radius: 10px;
     margin: 2px;
+}
+
+.boutonRedirectionGitHub {
+    display: inline-block;
+    background-color: var(--primaire);
+    color: var(--blanc);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 100vw;
+    cursor: pointer;
+    box-shadow: var(--ombre-legere);
+    transition: all 0.3s ease;
+
+    &::before {
+        content: "Dépot GitHub";
+        display: inline-block;
+    }
+}
+
+.boutonRedirectionGitHub:hover {
+    background-color: var(--accent-principal);
+    color: var(--blanc);
+    box-shadow: var(--halo-focus-principal);
+    transition: all 0.3s ease;
 }
 
 /* === Zone Présentation === */
