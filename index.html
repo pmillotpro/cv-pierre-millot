@@ -4,101 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#272932">
     <link rel="stylesheet" href="style.css">
     <title>CV MILLOT Pierre</title>
 </head>
 
 <body>
-    <h1>Bienvenue sur mon site CV</h1>
-    <div id="presentation">
-        <h2>Présentation</h2>
-        <img src="./src/" alt="photo de profile">
-        <div id="boxPresentation">
-            <p>MILLOT Pierre</p>
-            <p>saisir description</p>
+    <header class="entete">
+        <div class="conteneur">
+            <h1>Bienvenue sur mon site</h1>
         </div>
-    </div>
-    <div id="projets">
-        <h2>Projets réalisés</h2>
-        <div id="carouselProjets">
-            <div id="projetPlugInPool">
-                <p>Plug in Pool</p>
-                <p>saisir description</p>
-            </div>
-            <div id="projetPickomino">
-                <p>Pickomino</p>
-                <p>saisir description</p>
-            </div>
-            <div id="projetRadioDjDistant">
-                <p>RadioDJ Distant</p>
-                <p>saisir description</p>
+    </header>
+    <!-- Section Présentation -->
+    <section id="presentation">
+        <div class="conteneur">
+            <h2 class="textGreenCyan">Présentation</h2>
+            <hr>
+            <div id="grillePresentation">
+                <img id="photoDeProfile" src="./src/ppMoyenne.jpg" alt="photo de profile">
+                <div class="carte">
+                    <h3>MILLOT Pierre</h3>
+                    <p>Passionné par les métiers de la radio
+                        et par l’informatique, je suis motivé
+                        par l’envie d’apprendre de nouvelles
+                        compétences pour atteindre de
+                        nouveaux objectifs.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="formations">
-        <h2>Formations</h2>
-        <div id="formationStudioM">
-            <p>Studio M</p>
-            <p>saisir description</p>
+    </section>
+    <!-- Section Projets -->
+    <section class="cartes">
+        <div class="conteneur">
+            <h2>Projets réalisés</h2>
+            <hr>
+            <div class="grille">
+                <div class="carte">
+                    <h3>Plug in Pool</h3>
+                    <p>Le système Plug in Pool est un système numérique permettant de jouer un match de blackball
+                        (parfois
+                        appelé billard anglais, billard pool ou 8 pool).<br>Les matchs sont réalisées en n parties
+                        gagnantes.</p>
+                </div>
+                <div class="carte">
+                    <h3>Pickomino</h3>
+                    <p>Pickomino est un jeu de société créé par Reiner Knizia et édité par Gigamic, qui se joue avec 2
+                        ou 7
+                        joueurs maximum.<br>Le but du jeu est d'avoir plus de vers que ces adversaires pour remporter la
+                        partie.</p>
+                </div>
+                <div class="carte">
+                    <h3>RadioDJ Distant</h3>
+                    <p>Suite d’interfaces web permettant de visualiser les données de RadioDJ : notamment la playlist
+                        (diffuseur), le titre en cours, le temps restant de l’élément en cours, la gestion du
+                        cartouchier et
+                        le chargement d’éléments dans le diffuseur par ID.</p>
+                </div>
+            </div>
         </div>
-        <div id="formationBTS">
-            <p>BTS CIEL</p>
-            <p>saisir description</p>
+    </section>
+    <!-- Section Formations -->
+    <section class="cartes">
+        <div class="conteneur">
+            <h2 class="textGreenCyan">Formations</h2>
+            <hr>
+            <div class="grille">
+                <div class="carte">
+                    <h3>Studio M</h3>
+                    <p>Formation animateur radio, Animation radio</p>
+                </div>
+                <div class="carte">
+                    <h3>BTS CIEL</h3>
+                    <p>Etude d'informatique et de réseaux. Cybersécurité Informatique Electronique et Réseaux (CIEL).
+                        <br>Option
+                        IR : Informatique et Réseaux
+                    </p>
+                </div>
+                <div class="carte">
+                    <h3>BAC STI2D</h3>
+                    <p>Baccalauréat sciences et technologies de l'industrie et du développement durable (STI2D).
+                        <br>Option
+                        :
+                        Système d’information numérique
+                    </p>
+                </div>
+                <div class="carte">
+                    <h3>Brevet des collèges</h3>
+                    <p>Diplôme national du brevet des collèges</p>
+                </div>
+            </div>
         </div>
-        <div id="formationBAC">
-            <p>BAC STI2D</p>
-            <p>saisir description</p>
+    </section>
+    <!-- Section centre d'intérêt -->
+    <section class="cartes">
+        <div class="conteneur">
+            <h2 class="textOrange">Centre d'intérêt</h2>
+            <hr>
+            <div class="grille">
+                <div class="carte">
+                    <h3>Escalade</h3>
+                    <p>Passionné d'escalade.</p>
+                    <div class="carrousel">
+                        <img src="./src/images/escalade01-mobile.jpg" alt="Entrainement">
+                        <img src="./src/images/escalade02-mobile.jpg" alt="Escalade en dévers">
+                    </div>
+                </div>
+                <div class="carte">
+                    <h3>Photographie</h3>
+                    <p>saisir description</p>
+                    <div class="carrousel">
+                        <img src="" alt="Photographie d'étoiles">
+                        <img src="" alt="Photographie de nuit">
+                        <img src="" alt="Photographie de fleurs">
+                        <img src="" alt="Photographie de d'animaux">
+                        <img src="" alt="Photographie de paysages">
+                    </div>
+                </div>
+                <div class="carte">
+                    <h3>Bricolage</h3>
+                    <p>saisir description</p>
+                    <img src="" alt="">
+                </div>
+                <div class="carte">
+                    <h3>Radio</h3>
+                    <p>saisir description</p>
+                    <img src="" alt="">
+                </div>
+            </div>
         </div>
-        <div id="formationBrevet">
-            <p>Brevet des collèges</p>
-            <p>saisir description</p>
+    </section>
+    <!-- Section Contacts -->
+    <section class="cartes">
+        <div class="conteneur">
+            <h2 class="textBlack">Contacts</h2>
+            <hr>
+            <div class="grille">
+                <div class="carte">
+                    <img src="" alt="logo GitHub">
+                    <p>pmillotpro</p>
+                </div>
+                <div class="carte">
+                    <img src="" alt="logo linkedin">
+                    <p>pmillotpro</p>
+                </div>
+                <div class="carte">
+                    <img src="" alt="logo mail">
+                    <a href="mailto:pierre.millot.pro@gmail.com">pierre.millot.pro@gmail.com</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="centreInteret">
-        <h2>Centre d'intérêt</h2>
-        <div id="centreInteretEscalade">
-            <h3>Escalade</h3>
-            <p>saisir description</p>
-            <img src="" alt="">
-        </div>
-        <div id="centreInteretPhotographie">
-            <h3>Photographie</h3>
-            <p>saisir description</p>
-            <img src="" alt="">
-        </div>
-        <div id="centreInteretBricolage">
-            <h3>Bricolage</h3>
-            <p>saisir description</p>
-            <img src="" alt="">
-        </div>
-        <div id="centreInteretRadio">
-            <h3>Radio</h3>
-            <p>saisir description</p>
-            <img src="" alt="">
-        </div>
-    </div>
-    <div id="contacts">
-        <h2>Contacts</h2>
-        <div id="gitHub">
-            <img src="" alt="logo GitHub">
-            <p>pmillotpro</p>
-        </div>
-        <div id="linkedin">
-            <img src="" alt="logo linkedin">
-            <p>pmillotpro</p>
-        </div>
-        <div id="mail">
-            <img src="" alt="logo mail">
-            <a href="mailto:pierre.millot.pro@gmail.com">pierre.millot.pro@gmail.com</a>
-        </div>
-    </div>
-
-    <!-- CV en PDF -->
-    <div id="cv-pdf">
-        <a href="./src/CV_Radio_MILLOT_Pierre_V3.pdf" target="_blank"><button class="btn-pdf">CV Radio</button></a>
-        <a href="./src/CV_INFO_MILLOT_Pierre_V2.pdf" target="_blank"><button class="btn-pdf">CV
-                Informatique</button></a>
-    </div>
+    </section>
 </body>
 
 </html>
