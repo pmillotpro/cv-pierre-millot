@@ -67,10 +67,24 @@ hr {
     color: var(--fond-sombre);
 }
 
+i {
+    color: var(--blanc);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+i:hover {
+    cursor: pointer;
+    color: var(--accent-secondaire);
+    padding: 0.5rem;
+}
+
 /* === Classes === */
 .entete {
     background: var(--fond-sombre);
     padding: 1rem 0;
+    text-decoration: none;
 }
 
 .entete h1 {
@@ -153,7 +167,7 @@ hr {
     transition: all 0.3s ease;
 
     &::before {
-        content: "Dépot GitHub";
+        content: "Dépôt GitHub";
         display: inline-block;
     }
 }
@@ -163,6 +177,20 @@ hr {
     color: var(--blanc);
     box-shadow: var(--halo-focus-principal);
     transition: all 0.3s ease;
+}
+
+.piedDePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--fond-sombre);
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.piedDePage p {
+    margin: 0;
+    color: var(--blanc);
 }
 
 /* === Zone Présentation === */
