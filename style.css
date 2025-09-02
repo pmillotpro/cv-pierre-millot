@@ -1,21 +1,235 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F2F2F2;
-    color: #2F2F2F;
+:root {
+    --accent-principal: #f05d5e;
+    --accent-secondaire: #f2a65a;
+    --primaire: #0f7173;
+    --fond-clair: #e7ecef;
+    --fond-sombre: #272932;
+    --blanc: #ffffff;
+    --texte-primaire: #0f7173;
+    --texte-secondaire: #272932;
+    --texte-lien: #0f7173;
+    --texte-lien-survol: #f05d5e;
+    --ombre-legere: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --ombre-survol: 0 6px 20px rgba(0, 0, 0, 0.15);
+    --halo-focus-primaire: 0 0 0 3px rgba(15, 113, 115, 0.2);
+    --halo-focus-principal: 0 0 0 3px rgba(240, 93, 94, 0.2);
+}
+
+/* === Balises générales === */
+html {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: var(--fond-clair);
+    color: var(--texte-secondaire);
+    line-height: 1.6;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    margin: 0px;
+    padding: 0px;
 }
 
-.btn-pdf {
-    min-width: 20vw;
-    width: auto;
-    background-color: #2F2F2F;
-    color: #F2F2F2;
-    font-size: 20px;
-    border: solid transparent;
-    border-radius: 10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--texte-primaire);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    text-align: justify;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+hr {
+    color: var(--fond-sombre);
+}
+
+i {
+    color: var(--blanc);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+i:hover {
     cursor: pointer;
+    color: var(--accent-secondaire);
+    padding: 0.5rem;
+}
+
+/* === Classes === */
+.entete {
+    background: var(--fond-sombre);
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.entete h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--blanc);
+}
+
+.cartes {
+    padding: 3rem 0;
+}
+
+.carte {
+    background: var(--blanc);
+    border-radius: 12px;
+    box-shadow: var(--ombre-legere);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.carteCentrer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carte h3 {
+    margin-top: 0;
+    color: var(--texte-primaire);
+}
+
+.carte:hover {
+    box-shadow: var(--ombre-survol);
+    transform: translateY(-4px);
+}
+
+.grille {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.conteneur {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carrousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background-color: transparent;
+    margin-bottom: 10px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.carrousel img {
+    background-color: transparent;
+    width: 45vw;
+    border: none transparent;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.boutonRedirectionGitHub {
+    display: inline-block;
+    background-color: var(--primaire);
+    color: var(--blanc);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 100vw;
+    cursor: pointer;
+    box-shadow: var(--ombre-legere);
+    transition: all 0.3s ease;
+
+    &::before {
+        content: "Dépôt GitHub";
+        display: inline-block;
+    }
+}
+
+.boutonRedirectionGitHub:hover {
+    background-color: var(--accent-principal);
+    color: var(--blanc);
+    box-shadow: var(--halo-focus-principal);
+    transition: all 0.3s ease;
+}
+
+.piedDePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--fond-sombre);
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.piedDePage p {
+    margin: 0;
+    color: var(--blanc);
+}
+
+.bottomLinks {
+    font-size: 0.8rem;
+    color: var(--blanc);
+}
+
+.bottomLinks a:hover {
+    cursor: pointer;
+    color: var(--accent-secondaire);
+    transition: all 0.3 ease;
+}
+
+p a {
+    color: var(--texte-secondaire);
+    font-size: 1rem;
+}
+
+p a:hover {
+    cursor: pointer;
+    color: var(--accent-principal);
+    transition: all 0.3 ease;
+}
+
+/* === Zone Présentation === */
+#grillePresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#photoDeProfile {
+    inline-size: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 100vw;
+    border: solid 3px var(--primaire);
+    box-shadow: 0px 0px 15px var(--primaire);
 }

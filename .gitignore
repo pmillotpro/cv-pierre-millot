@@ -3,3 +3,11 @@
 
 # Fichier Desktop Services Store
 .DS_Store
+
+# Style scss
+
+*.scss
+
+# Tests
+
+test.html
