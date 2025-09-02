@@ -12,6 +12,6 @@
 
 ---
 
-## Site internet
+## Site Internet
 
 [voir le site](https://pmillotpro.github.io/cv-pierre-millot/)
