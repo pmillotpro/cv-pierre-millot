@@ -55,6 +55,7 @@ h3 {
 
 p {
     text-align: justify;
+    text-decoration: none;
 }
 
 section {
@@ -191,6 +192,28 @@ i:hover {
 .piedDePage p {
     margin: 0;
     color: var(--blanc);
+}
+
+.bottomLinks {
+    font-size: 0.8rem;
+    color: var(--blanc);
+}
+
+.bottomLinks a:hover {
+    cursor: pointer;
+    color: var(--accent-secondaire);
+    transition: all 0.3 ease;
+}
+
+p a {
+    color: var(--texte-secondaire);
+    font-size: 1rem;
+}
+
+p a:hover {
+    cursor: pointer;
+    color: var(--accent-principal);
+    transition: all 0.3 ease;
 }
 
 /* === Zone Présentation === */
