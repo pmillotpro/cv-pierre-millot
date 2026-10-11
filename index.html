@@ -5,31 +5,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#272932">
+    <link rel="shortcut icon" href="./src/ppMoyenne.ico" type="image/x-icon">
+    <meta name="description" content="Site CV de Pierre Millot">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>CV MILLOT Pierre</title>
 </head>
 
 <body>
-    <header class="entete">
-        <div class="conteneur">
-            <h1>Bienvenue sur mon site</h1>
+    <header class="cartes">
+        <div id="resumer">
+            <div id="personne">
+                <img id="photoDeProfile" src="./src/ppMoyenne.jpg" alt="photo de profile">
+                <h4>Pierre MILLOT</h4>
+            </div>
+            <div id="contact">
+                <a href="https://github.com/pmillotpro" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pierre-millot-0585b7293/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div id="presentation">
+            <h1>Journaliste et Développeur</h1>
+            <p>En poste chez Radio Vinci Autoroutes, je réalise l'information trafic en temps réel sur les autoroutes du
+                réseau Vinci.
+                <br>
+                En parallèle de mon activité professionnelle, je développe sur mon temps libre des solutions web,
+                mobiles et logicielles pour répondre à des besoins concrets.
+                <br>
+                Diplômé d’un Bac+2 en Cybersécurité, Informatique et Réseaux au campus La Salle Avignon, je dispose de
+                solides bases en développement informatique et d’une approche orientée vers la résolution de problèmes.
+            </p>
         </div>
     </header>
-    <!-- Section Présentation -->
-    <section id="presentation">
+    <!-- Section Poste -->
+    <section class="cartes">
         <div class="conteneur">
-            <h2 class="textGreenCyan">Présentation</h2>
+            <h2>Activité professionnelle</h2>
             <hr>
-            <div id="grillePresentation">
-                <img id="photoDeProfile" src="./src/ppMoyenne.jpg" alt="photo de profile">
-                <div class="carte">
-                    <h3>MILLOT Pierre</h3>
-                    <p>Passionné par les métiers de la radio
-                        et par l’informatique, je suis motivé
-                        par l’envie d’apprendre de nouvelles
-                        compétences pour atteindre de
-                        nouveaux objectifs.</p>
+            <div class="parent">
+                <div class="bulles">
+                    <h5>Journaliste chez Radio Vinci Autoroutes</h5>
+                    <p>Réalisation de l'information trafic en temps réel sur les autoroutes du réseau Vinci</p>
+                    <div class="liste">
+                        <a href="https://radio.vinci-autoroutes.com" target="_blank">
+                            <span class="badgeNow">Site de la radio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Compétences -->
+    <section class="cartes">
+        <div class="conteneur">
+            <h2>Compétences</h2>
+            <hr>
+            <div class="parent">
+                <div id="devWeb" class="bulles">
+                    <h5>Dev web</h5>
+                    <div class="liste">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS / SCSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">PHP</span>
+                        <span class="badge">SQL</span>
+                    </div>
+                </div>
+                <div id="devLogiciel" class="bulles">
+                    <h5>Dev logiciel</h5>
+                    <div class="liste">
+                        <span class="badge">C</span>
+                        <span class="badge">C++</span>
+                        <span class="badge">Java</span>
+                    </div>
+                    <hr>
+                    <div class="liste">
+                        <span class="badgeLibrary">Raylib</span>
+                        <span class="badgeLibrary">Swing</span>
+                        <span class="badgeLibrary">JavaFX</span>
+                    </div>
+                </div>
+                <div id="devMobile" class="bulles">
+                    <h5>Dev mobile</h5>
+                    <div class="liste">
+                        <span class="badge">Java</span>
+                        <span class="badge">Swift & SwiftUI</span>
+                    </div>
+                </div>
+                <div id="bdd" class="bulles">
+                    <h5>Base de données</h5>
+                    <div class="liste">
+                        <span class="badge">MySQL</span>
+                        <span class="badge">SQLite</span>
+                    </div>
+                </div>
+                <div id="outils" class="bulles">
+                    <h5>Outils</h5>
+                    <div class="liste">
+                        <span class="badge">Vim</span>
+                        <span class="badge">Git</span>
+                        <span class="badge">GitHub</span>
+                        <span class="badge">Visual Studio Code</span>
+                        <span class="badge">Android Studio</span>
+                        <span class="badge">Xcode</span>
+                        <span class="badge">Figma</span>
+                    </div>
+                </div>
+                <div id="osEtMicroControleur" class="bulles">
+                    <h5>OS & Micro-contrôleur</h5>
+                    <div class="liste">
+                        <span class="badge">Linux</span>
+                        <span class="badge">MacOS</span>
+                        <span class="badge">Windows</span>
+                        <span class="badge">Raspberry Pi</span>
+                        <span class="badge">Arduino</span>
+                        <span class="badge">ESP32</span>
+                    </div>
+                </div>
+                <div id="radio" class="bulles">
+                    <h5>Radio</h5>
+                    <div class="liste">
+                        <span class="badge">Animation tranche de flux</span>
+                        <span class="badge">Animation en duo</span>
+                        <span class="badge">Journalisme</span>
+                        <span class="badge">Montage audio</span>
+                        <span class="badge">Marketing</span>
+                        <span class="badge">Réalisation</span>
+                        <span class="badge">A2I</span>
+                        <span class="badge">Dalet</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,41 +147,61 @@
         <div class="conteneur">
             <h2>Projets réalisés</h2>
             <hr>
-            <div class="grille">
-                <div class="carte">
-                    <div class="carteCentrer">
-                        <h3>Plug in Pool</h3>
-                        <p>Le système Plug in Pool est un système numérique permettant de jouer un match de blackball
-                            (parfois
-                            appelé billard anglais, billard pool ou 8 pool).<br>Les matchs sont réalisées en n parties
-                            gagnantes.</p>
-                        <a href="https://github.com/bts-lasalle-avignon-projets/plug-in-pool-2025"
-                            target="_blank"><button class="boutonRedirectionGitHub"></button></a>
+
+            <div class="parent">
+                <div class="bulles">
+                    <div class="projet">
+                        <h5>Plug in Pool</h5>
+                        <a href="https://github.com/bts-lasalle-avignon-projets/plug-in-pool-2025" target="_blank">
+                            <button class="badgeNow">Voir sur GitHub</button>
+                        </a>
+                    </div>
+                    <p>Le système Plug in Pool est un système numérique permettant de jouer un match de blackball
+                        (parfois
+                        appelé billard anglais, billard pool ou 8 pool).<br>Les matchs sont réalisées en n parties
+                        gagnantes.</p>
+                    <div class="liste">
+                        <span class="badge">GitFlow</span>
+                        <span class="badge">Android Studio</span>
+                        <span class="badge">Java</span>
+                        <span class="badge">SQLite</span>
                     </div>
                 </div>
-                <div class="carte">
-                    <div class="carteCentrer">
-                        <h3>Pickomino</h3>
-                        <p>Pickomino est un jeu de société créé par Reiner Knizia et édité par Gigamic, qui se joue avec
-                            2
-                            ou 7
-                            joueurs maximum.<br>Le but du jeu est d'avoir plus de vers que ces adversaires pour
-                            remporter la
-                            partie.</p>
-                        <a href="https://github.com/bts-lasalle-avignon-projets/MP25-T1-PICKOMINO"
-                            target="_blank"><button class="boutonRedirectionGitHub"></button></a>
+                <div class="bulles">
+                    <div class="projet">
+                        <h5>Pickomino</h5>
+                        <a href="https://github.com/bts-lasalle-avignon-projets/MP25-T1-PICKOMINO" target="_blank">
+                            <button class="badgeNow">Voir sur GitHub</button>
+                        </a>
+                    </div>
+                    <p>Pickomino est un jeu de société créé par Reiner Knizia et édité par Gigamic, qui se joue avec 2
+                        ou 7
+                        joueurs maximum.<br>Le but du jeu est d'avoir plus de vers que ces adversaires pour
+                        remporter la
+                        partie.</p>
+                    <div class="liste">
+                        <span class="badge">GitFlow</span>
+                        <span class="badge">MVC</span>
+                        <span class="badge">C++</span>
                     </div>
                 </div>
-                <div class="carte">
-                    <div class="carteCentrer">
-                        <h3>RadioDJ Distant</h3>
-                        <p>Suite d’interfaces web permettant de visualiser les données de RadioDJ : notamment la
-                            playlist
-                            (diffuseur), le titre en cours, le temps restant de l’élément en cours, la gestion du
-                            cartouchier et
-                            le chargement d’éléments dans le diffuseur par ID.</p>
-                        <a href="https://github.com/pierremlt1/radioDJ-Distant" target="_blank"><button
-                                class="boutonRedirectionGitHub"></button></a>
+                <div class="bulles">
+                    <div class="projet">
+                        <h5>RadioDJ Distant</h5>
+                        <a href="https://github.com/pierremlt1/radioDJ-Distant" target="_blank">
+                            <button class="badgeNow">Voir sur GitHub</button>
+                        </a>
+                    </div>
+                    <p>Suite d’interfaces web permettant de visualiser les données de RadioDJ : notamment la
+                        playlist
+                        (diffuseur), le titre en cours, le temps restant de l’élément en cours, la gestion du
+                        cartouchier et
+                        le chargement d’éléments dans le diffuseur par ID</p>
+                    <div class="liste">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">PHP</span>
                     </div>
                 </div>
             </div>
@@ -82,53 +210,72 @@
     <!-- Section Formations -->
     <section class="cartes">
         <div class="conteneur">
-            <h2 class="textGreenCyan">Formations</h2>
+            <h2>Formations</h2>
             <hr>
-            <div class="grille">
-                <div class="carte">
-                    <h3>Formation d'Animateur Radio</h3>
-                    <ul>
-                        <li>Réalisation radio sur la console AXIA Fusion avec le logiciel A2i</li>
-                        <li>Animation radio (enchaînements, speaks, rédaction de speaks)</li>
-                        <li>Journalisme radio (rédaction de flash, agenda, papier, son, enrobé, interview,
-                            micro-trottoir, chroniques)</li>
-                        <li>Montage audio (montage de music démo sur SoundForge)</li>
-                        <li>Histoire de la radio</li>
-                        <li>Marketing (promo, réseaux sociaux)</li>
-                    </ul>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2025 - 2026 &#x2022; Formation Animateur Radio</h3>
+                        <p>Ce parcours comprend la réalisation radio sur console AXIA Fusion avec le logiciel A2i,
+                            l'animation d'antenne (enchaînements, speaks et rédaction), ainsi que le journalisme radio
+                            (rédaction de flashs, agendas, papiers, sons, enrobés, interviews, micro-trottoirs et
+                            chroniques).<br>Il inclut également le montage audio de démos musicales sur SoundForge,
+                            l'étude
+                            de l'histoire de la radio et des notions de marketing axées sur la promotion et les réseaux
+                            sociaux.</p>
+                    </div>
                 </div>
-                <div class="carte" id="bts">
-                    <h3>BTS CIEL</h3>
-                    <p>Etude d'informatique et de réseaux. Cybersécurité Informatique Electronique et Réseaux (CIEL).
-                        <br>Option
-                        IR : Informatique et Réseaux
-                    </p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023 - 2025 &#x2022; BTS CIEL</h3>
+                        <p>Etude d'informatique et de réseaux. Cybersécurité Informatique Electronique et Réseaux
+                            (CIEL).
+                            <br>Option
+                            IR : Informatique et Réseaux
+                        </p>
+                    </div>
                 </div>
-                <div class="carte">
-                    <h3>BAC STI2D</h3>
-                    <p>Baccalauréat sciences et technologies de l'industrie et du développement durable (STI2D).
-                        <br>Option
-                        :
-                        Système d’information numérique
-                    </p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2020 - 2023 &#x2022; BAC STI2D</h3>
+                        <p>Baccalauréat sciences et technologies de l'industrie et du développement durable (STI2D).
+                            <br>Option
+                            :
+                            Système d’information numérique
+                        </p>
+                    </div>
                 </div>
-                <div class="carte">
-                    <h3>Brevet des collèges</h3>
-                    <p>Diplôme national du brevet des collèges</p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2016 - 2020 &#x2022; Brevet des collèges</h3>
+                        <p>Diplôme national du brevet des collèges</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <hr>
     <footer class="piedDePage">
-        <p>&copy; 2025 MILLOT Pierre - Tous droits réservés.</p>
+        <p>&copy; 2026 MILLOT Pierre - Tous droits réservés.</p>
         <div id="contacts">
-            <a href="https://github.com/pmillotpro" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pierre-millot-0585b7293/" target="_blank"><i
-                    class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:pierre.millot.pro@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/pmillotpro" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pierre-millot-0585b7293/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:pierre.millot.pro@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
         </div>
         <p class="bottomLinks">Librairie d'icons <a class="bottomLinks" href="https://fontawesome.com/license/free"
                 target="_blank">fontawesome.com</a>
+        </p>
+        <p class="bottomLinks">Mentions Légales : <a class="bottomLinks" href="./infos.html" target="_blank">voir</a>
         </p>
     </footer>
 </body>

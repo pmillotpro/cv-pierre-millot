@@ -1,32 +1,49 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./src/JetBrainsMono-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu Regular';
+    src: url('./src/Ubuntu-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
 :root {
+    /* Version 100% */
+    --fond: #111112;
+    --fond-leger: #1c1c1e;
+    --texte: #e7ecef;
     --accent-principal: #f05d5e;
     --accent-secondaire: #f2a65a;
-    --primaire: #0f7173;
-    --fond-clair: #e7ecef;
-    --fond-sombre: #272932;
-    --blanc: #ffffff;
-    --texte-primaire: #0f7173;
-    --texte-secondaire: #272932;
-    --texte-lien: #0f7173;
-    --texte-lien-survol: #f05d5e;
+    --accent-tertiaire: #3aadff;
+    --accent-quaternaire: #0f7173;
+
+    /* A modifier */
     --ombre-legere: 0 4px 12px rgba(0, 0, 0, 0.08);
     --ombre-survol: 0 6px 20px rgba(0, 0, 0, 0.15);
-    --halo-focus-primaire: 0 0 0 3px rgba(15, 113, 115, 0.2);
+    --halo-focus-tertiaire: 0 0 0 3px rgba(54, 160, 230, 0.2);
     --halo-focus-principal: 0 0 0 3px rgba(240, 93, 94, 0.2);
 }
 
 /* === Balises générales === */
 html {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    background-color: var(--fond-clair);
-    color: var(--texte-secondaire);
+    font-family: 'Ubuntu Regular', 'Roboto', sans-serif;
+    background-color: var(--fond);
+    color: var(--texte);
     line-height: 1.6;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
     padding: 0px;
 }
 
@@ -36,25 +53,41 @@ h3,
 h4,
 h5,
 h6 {
-    text-align: center;
+    margin: 0;
+    font-family: 'JetBrains Mono', 'Roboto', monospace;
     font-weight: bold;
+    color: var(--texte);
 }
 
 h1 {
     font-size: 2.5rem;
-    color: var(--texte-primaire);
 }
 
 h2 {
     font-size: 2rem;
+    margin-bottom: 0px;
 }
 
 h3 {
     font-size: 1.5rem;
 }
 
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
 p {
-    text-align: justify;
     text-decoration: none;
 }
 
@@ -65,11 +98,13 @@ section {
 }
 
 hr {
-    color: var(--fond-sombre);
+    color: var(--fond-leger);
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 i {
-    color: var(--blanc);
+    color: var(--texte);
     font-size: 1.2rem;
     padding: 0.5rem;
     transition: all 0.3s ease;
@@ -77,107 +112,209 @@ i {
 
 i:hover {
     cursor: pointer;
-    color: var(--accent-secondaire);
+    color: var(--accent-tertiaire);
     padding: 0.5rem;
 }
 
-/* === Classes === */
-.entete {
+a {
+    text-decoration: none;
+}
+
+/* === Classes & ID === */
+#resumer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#personne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#personne img {
+    inline-size: 60px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 100vw;
+    border: solid 3px var(--accent-quaternaire);
+    box-shadow: 0px 0px 15px var(--accent-quaternaire);
+}
+
+#personne h4 {
+    margin: 0;
+    color: var(--texte);
+}
+
+#presentation {
+    margin-top: 6rem;
+}
+
+.cartes {
     background: var(--fond-sombre);
     padding: 1rem 0;
     text-decoration: none;
 }
 
-.entete h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: var(--blanc);
+.parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.cartes {
-    padding: 3rem 0;
-}
-
-.carte {
-    background: var(--blanc);
+.bulles {
+    background-color: var(--fond-leger);
     border-radius: 12px;
-    box-shadow: var(--ombre-legere);
-    padding: 1.5rem;
+    padding: 20px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.projet {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 1rem;
+}
+
+.projet h5 {
+    margin: 0;
+}
+
+.liste {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge {
+    background-color: color-mix(in srgb, var(--accent-tertiaire) 15%, var(--fond-leger) 85%);
+    color: var(--accent-tertiaire);
+    border: 1px solid var(--accent-tertiaire);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 100vw;
     transition: all 0.3s ease;
 }
 
-.carteCentrer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.badgeLibrary {
+    background-color: color-mix(in srgb, var(--accent-quaternaire) 15%, var(--fond-leger) 85%);
+    color: var(--accent-quaternaire);
+    border: 1px solid var(--accent-quaternaire);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 100vw;
+    transition: all 0.3s ease;
 }
 
-.carte h3 {
+.badgeNow {
+    background-color: var(--accent-principal);
+    color: color-mix(in srgb, var(--accent-principal) 15%, var(--fond-leger) 85%);
+    border: 1px solid var(--accent-principal);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 100vw;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background-color: var(--accent-tertiaire);
+    color: color-mix(in srgb, var(--accent-tertiaire) 15%, var(--fond-leger) 85%);
+    cursor: pointer;
+}
+
+.badgeLibrary:hover {
+    background-color: var(--accent-quaternaire);
+    color: color-mix(in srgb, var(--accent-quaternaire) 15%, var(--fond-leger) 85%);
+    cursor: pointer;
+}
+
+.badgeNow:hover {
+    background-color: color-mix(in srgb, var(--accent-principal) 15%, var(--fond-leger) 85%);
+    color: var(--accent-principal);
+    cursor: alias;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--accent-tertiaire);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--fond-leger);
+    border: 3px solid var(--accent-tertiaire);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    background-color: var(--accent-tertiaire);
+}
+
+.timeline-content {
+    background-color: var(--fond-leger);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-3px);
+}
+
+.timeline-content h3 {
     margin-top: 0;
-    color: var(--texte-primaire);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--texte);
 }
 
-.carte:hover {
-    box-shadow: var(--ombre-survol);
-    transform: translateY(-4px);
-}
-
-.grille {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.5rem;
-    margin-top: 2rem;
+.timeline-content p {
+    margin: 0;
+    color: var(--texte);
+    font-size: 0.95rem;
 }
 
 .conteneur {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
-}
-
-.carrousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    background-color: transparent;
-    margin-bottom: 10px;
-    overflow: hidden;
-    overflow-x: scroll;
-}
-
-.carrousel img {
-    background-color: transparent;
-    width: 45vw;
-    border: none transparent;
-    border-radius: 10px;
-    margin: 2px;
-}
-
-.boutonRedirectionGitHub {
-    display: inline-block;
-    background-color: var(--primaire);
-    color: var(--blanc);
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 100vw;
-    cursor: pointer;
-    box-shadow: var(--ombre-legere);
-    transition: all 0.3s ease;
-
-    &::before {
-        content: "Dépôt GitHub";
-        display: inline-block;
-    }
-}
-
-.boutonRedirectionGitHub:hover {
-    background-color: var(--accent-principal);
-    color: var(--blanc);
-    box-shadow: var(--halo-focus-principal);
-    transition: all 0.3s ease;
+    margin: 0;
 }
 
 .piedDePage {
@@ -191,12 +328,12 @@ i:hover {
 
 .piedDePage p {
     margin: 0;
-    color: var(--blanc);
+    color: var(--texte);
 }
 
 .bottomLinks {
     font-size: 0.8rem;
-    color: var(--blanc);
+    color: var(--texte);
 }
 
 .bottomLinks a:hover {
@@ -205,31 +342,11 @@ i:hover {
     transition: all 0.3 ease;
 }
 
-p a {
-    color: var(--texte-secondaire);
-    font-size: 1rem;
+.mentions-legales-paragraph {
+    margin: 0;
 }
 
-p a:hover {
-    cursor: pointer;
-    color: var(--accent-principal);
-    transition: all 0.3 ease;
-}
-
-/* === Zone Présentation === */
-#grillePresentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-#photoDeProfile {
-    inline-size: 200px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 100vw;
-    border: solid 3px var(--primaire);
-    box-shadow: 0px 0px 15px var(--primaire);
+.mentions-legales-liens {
+    text-decoration: none;
+    color: var(--accent-secondaire);
 }
